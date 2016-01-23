@@ -39,7 +39,7 @@ angular.module('RDash')
         $scope.deleteInvoice = function (invoice) {
             url = 'http://52.91.246.101:8081/invoices/' + invoice.invoiceNo;
             $http.delete(url).success(function (inv) {
-                console.log("Successfully delete invoice with id: " + invoice.invoiceId)
+                console.log("Successfully delete invoice")
             }).error(function (err) {
                 console.log("Could not delete invoice");
                 console.log(err)

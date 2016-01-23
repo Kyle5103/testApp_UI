@@ -20,7 +20,7 @@
             </div>
             <div class="form-group" id="status_add">
                 Status<br>
-                <select ng-model="selectedInvoice.status">
+                <select ng-model="invoice.status">
                     <option value="Incomplete">Incomplete</option>
                     <option value="Complete">Complete</option>
                 </select>
@@ -30,7 +30,7 @@
                 <input class="text-box" ng-model="invoice.comment">
             </div>
 
-            <a href="#">
+            <a href="#/dashboard">
                 <button type="submit" class="btn btn-default" ng-click="createInvoice(invoice)">Create</button>
             </a>
             <a href="#">
