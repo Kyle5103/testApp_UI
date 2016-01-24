@@ -13,6 +13,7 @@
                         <th>Company Name</th>
                         <th>Type of Work</th>
                         <th>Amount</th>
+                        <th>Due Date</th>
                         <th>Description</th>
                         <th>Status</th>
                         <tr ng-repeat="inv in invoices">
@@ -20,6 +21,7 @@
                             <td id="companyName_{{inv.invoiceNo}}">{{inv.companyName}}</td>
                             <td id="typeOfWork_{{inv.invoiceNo}}">{{inv.typeOfWork}}</td>
                             <td id="price_{{inv.invoiceNo}}">{{inv.price}}</td>
+                            <td id="dueDate_{{inv.duedate}}">{{inv.dueDate}}</td>
                             <td id="comment_{{inv.invoiceNo}}">{{inv.comment}}</td>
                             <td id="status_{{inv.invoiceNo}}">{{inv.status}}</td>
                         </tr>
