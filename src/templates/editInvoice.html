@@ -1,55 +1,51 @@
-<script src="js/controllers/dataController.js"></script>
+<script src="js/controllers/dataController.js" onload="getInvoice()"></script>
 <div class="row" ng-controller="Hello">
     <div class="col-lg-6">
-        <div class="form-group">
-            <label>Invoice to Update: </label>
-            <select ng-model="selectedInvoice"
-                    ng-options="inv.invoiceNo for inv in invoices"></select>
-        </div>
-        <form role="form">
+
+        <form role="form" ng-model="invoiceGet">
             <div class="form-group" id="invoiceNo_add">
                 Invoice Number<br>
-                <input class="form-control" ng-model="selectedInvoice.invoiceNo" ng-disabled="true">
+                <input class="form-control" ng-model="invoiceGet.invoiceNo" ng-disabled="true">
             </div>
             <div class="form-group" id="compName_add">
                 Company Name<br>
-                <input class="form-control" ng-model="selectedInvoice.companyName">
+                <input class="form-control" ng-model="invoiceGet.companyName">
             </div>
             <div class="form-group" id="typeofwork_add">
                 Type of Work<br>
-                <input class="form-control" ng-model="selectedInvoice.typeOfWork">
+                <input class="form-control" ng-model="invoiceGet.typeOfWork">
             </div>
             <div class="form-group" id="cost_add">
-                Cost<br>
-                <input class="form-control" ng-model="selectedInvoice.price">
+                Amount<br>
+                <input class="form-control" ng-model="invoiceGet.price">
             </div>
             <div class="form-group" id="status_add">
                 Status<br>
-                <select ng-model="selectedInvoice.status">
-                    <option value="Incomplete">Incomplete</option>
-                    <option value="Complete">Complete</option>
+                <select ng-model="invoiceGet.status">
+                    <option value="Paid">Paid</option>
+                    <option value="Sent">Sent</option>
+                    <option value="Draft">Draft</option>
+                    <option value="Past Due">Past Due</option>
                 </select>
             </div>
             <div class="form-group" id="comments_add">
-                Comments<br>
-                <input class="text" style="width: 300px;" ng-model="selectedInvoice.comment">
+                Description<br>
+                <input class="text" style="width: 300px;" ng-model="invoiceGet.comment">
             </div>
 
-            <a href="#/dashboard">
-                <button id="saveButton" type="submit" class="btn btn-default" ng-click="updateInvoice(selectedInvoice)">
+            <a>
+                <button id="saveButton" type="submit" class="btn btn-default" ng-click="updateInvoice(invoiceGet)">
                     Save
                 </button>
             </a>
-            <a href="#/dashboard">
+            <a>
                 <button type="button" class="btn btn-default" id="deleteButton"
-                        ng-click="deleteInvoice(selectedInvoice)" ng-show="selectedInvoice">Delete Invoice
+                        ng-click="deleteInvoice(invoiceGet)" ng-show="invoiceGet">Delete Invoice
                 </button>
             </a>
-
             <a href="#/tables">
                 <button type="button" class="btn btn-default">Cancel</button>
             </a>
         </form>
-
     </div>
 </div>

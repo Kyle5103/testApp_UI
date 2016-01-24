@@ -1,4 +1,3 @@
-<script src="js/controllers/dataController.js"></script>
 <div class="row" ng-controller="Hello">
     <div class="col-lg-6">
         <form role="form">
@@ -15,22 +14,24 @@
                 <input class="form-control" placeholder="Enter type of work" ng-model="invoice.typeOfWork">
             </div>
             <div class="form-group" id="cost_add">
-                Cost<br>
+                Amount<br>
                 <input class="form-control" placeholder="Enter cost" ng-model="invoice.price">
             </div>
             <div class="form-group" id="status_add">
                 Status<br>
                 <select ng-model="invoice.status">
-                    <option value="Incomplete">Incomplete</option>
-                    <option value="Complete">Complete</option>
+                    <option value="Paid">Paid</option>
+                    <option value="Sent">Sent</option>
+                    <option value="Draft">Draft</option>
+                    <option value="Past Due">Past Due</option>
                 </select>
             </div>
             <div class="form-group" id="comments_add">
-                Comments<br>
+                Description<br>
                 <input class="text-box" ng-model="invoice.comment">
             </div>
 
-            <a href="#/dashboard">
+            <a>
                 <button type="submit" class="btn btn-default" ng-click="createInvoice(invoice)">Create</button>
             </a>
             <a href="#">

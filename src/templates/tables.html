@@ -12,11 +12,11 @@
                         <th>Invoice Number</th>
                         <th>Company Name</th>
                         <th>Type of Work</th>
-                        <th>Cost</th>
-                        <th>Comments</th>
+                        <th>Amount</th>
+                        <th>Description</th>
                         <th>Status</th>
                         <tr ng-repeat="inv in invoices">
-                            <td id="invoiceNo_{{inv.invoiceNo}}"><a ng-click="setInvoice(inv.invoiceNo)" href="#/editInvoice">{{inv.invoiceNo}} </a></td>
+                            <td id="invoiceNo_{{inv.invoiceNo}}"><a ng-click="setInvoice(inv)" href="#/editInvoice">{{inv.invoiceNo}} </a></td>
                             <td id="companyName_{{inv.invoiceNo}}">{{inv.companyName}}</td>
                             <td id="typeOfWork_{{inv.invoiceNo}}">{{inv.typeOfWork}}</td>
                             <td id="price_{{inv.invoiceNo}}">{{inv.price}}</td>

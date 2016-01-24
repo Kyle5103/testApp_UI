@@ -3,7 +3,7 @@ angular.module("RDash", ["ui.bootstrap", "ui.router", "ngCookies"]);
 angular.module("RDash").config(["$stateProvider", "$urlRouterProvider", function (t, e) {
     e.otherwise("/"), t.state("index", {
         url: "/",
-        templateUrl: "templates/dashboard.html"
+        templateUrl: "templates/tables.html"
     }).state("tables", {url: "/tables", templateUrl: "templates/tables.html"})
         .state("addInvoice", {url: "/addInvoice", templateUrl: "templates/addInvoice.html"})
         .state("editInvoice", {url: "/editInvoice", templateUrl: "templates/editInvoice.html"})
