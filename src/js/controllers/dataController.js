@@ -6,7 +6,7 @@ angular.module('RDash').directive('fillInput', function(){
 })
 angular.module('RDash')
     .controller('Hello', ["$scope", '$http', 'dataFactory', '$location', function ($scope, $http, dataFactory, $location) {
-        var host = 'http://localhost:8080'
+        var host = 'http://52.91.246.101:8081'
         $scope.getInvoices = function () {
             $http.get(host + '/invoices').
                 success(function (data) {
